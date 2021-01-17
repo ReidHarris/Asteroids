@@ -11,22 +11,22 @@
 int main(int argc, char **argv) {
 	Game G;
 
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-    glutInitWindowPosition(100, 100);
-    glutInitWindowSize(X_WINDOW_SIZE, Y_WINDOW_SIZE);
-    glutCreateWindow("Gravity simulation");
-    G.init();
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
+	glutInitWindowPosition(100, 100);
+	glutInitWindowSize(X_WINDOW_SIZE, Y_WINDOW_SIZE);
+	glutCreateWindow("Gravity simulation");
+	G.init();
 
-    glutDisplayFunc(display);
-    glutMouseFunc(mouse);
-    glutMotionFunc(mouseMotion);
-    glutKeyboardFunc(keyboard);
+	glutDisplayFunc(display);
+	glutMouseFunc(mouse);
+	glutMotionFunc(mouseMotion);
+	glutKeyboardFunc(keyboard);
 	timer(0);
 	addRandomParticle(100);
 
-    glutMainLoop();
-    return 1;
+	glutMainLoop();
+	return 1;
 }
 
 
